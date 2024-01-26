@@ -14,31 +14,36 @@ app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
 
-const fetch = require('node-fetch'); // You might need to run `npm install node-fetch` if you haven't already
+// Translation Endpoint
 
 app.post('/translate', async (req, res) => {
     const { text, targetLang } = req.body;
-    const deepLApiKey = 'YOUR_DEEPL_API_KEY'; // Replace with your actual DeepL API key
+    // Replace 'YOUR_DEEPL_API_KEY' with your actual DeepL API key
+    const apiKey = 'YOUR_DEEPL_API_KEY';
+    const url = `https://api.deepl.com/v2/translate`;
 
     try {
-        const response = await fetch('https://api.deepl.com/v2/translate', {
+        const response = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': `DeepL-Auth-Key ${deepLApiKey}`
+                'Authorization': `DeepL-Auth-Key ${apiKey}`,
+                'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: new URLSearchParams({ text, target_lang: targetLang })
+            body: new URLSearchParams({
+                'text': text,
+                'target_lang': targetLang
+            })
         });
 
-        if (!response.ok) {
-            throw new Error('Failed to translate text');
-        }
+        if (!response.ok) throw new Error('Translation API call failed.');
 
         const data = await response.json();
-        res.json(data); // Send the translation data back to the extension
+        res.json(data);
     } catch (error) {
-        console.error('Translation error:', error);
+        console.error(error);
         res.status(500).send('Server error during translation');
     }
 });
+
+
 
