@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="translate.css">
+    <title>Translator</title>
+</head>
+
+<body>
+    <div class="translator-container">
+        <div class="header">
+            <i class="fas fa-arrow-left header-icon clickable-arrow larger-arrow" id="backArrow"></i>
+
+            <h1>TRANSLATE</h1>
+        </div>
+        <div class="content">
+            <div class="text-box">
+                <label for="englishText">English</label>
+                <textarea id="englishText" placeholder="In English..."></textarea>
+            </div>
+            <!-- Ensure translation arrows are in their own container for proper spacing -->
+            <div class="translation-arrows">
+                <i class="fas fa-arrow-right translate-arrow clickable-arrow" id="translateToFrench"></i>
+                <i class="fas fa-arrow-left translate-arrow clickable-arrow" id="translateToEnglish"></i>
+            </div>
+            <div class="text-box">
+                <label for="frenchText">Française</label>
+                <textarea id="frenchText" placeholder="En Française..."></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+
+</html>

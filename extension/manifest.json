@@ -1,17 +1,22 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "En Parlant",
-    "version": "1.0",
+    "version": "1.1",
     "description": "A Chrome extension for quick translations.",
     "icons": {
-        "48": "test.png"
+        "48": "icon.png"
     },
-    "browser_action": {
-        "default_popup": "popup.html",
-        "default_icon": "test.png"
+    "action": {
+        "default_popup": "homepage.html",
+        "default_icon": "icon.png"
     },
     "permissions": [
         "activeTab",
-        "deepL API endpoint"
-    ]
+        "http://localhost:3000/*"
+    ],
+    "content_scripts": [],
+    "background": {},
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';"
+    }
 }
