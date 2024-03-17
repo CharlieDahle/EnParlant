@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.saved-container {
+    width: 400px;
+    /* This is relative to the viewport width */
+    max-width: 1600px;
+    /* Increase this value to make the box wider on large screens */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    background-color: #e6e6e6;
+    color: #4d4aff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-icon {
+    margin-right: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.clickable-arrow {
+    cursor: pointer;
+}
+
+.larger-arrow {
+    font-size: 24px;
+    /* Adjust the size as needed */
+}
+
+/* Tab styling */
+.tabs {
+    display: flex;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: #333;
+    cursor: pointer;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Show the active tab content */
+.tab-content.active {
+    display: block;
+}
