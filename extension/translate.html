@@ -9,17 +9,17 @@
     <title>Translator</title>
 </head>
 
-<body>
+<body id="translatePageIdentifier">
     <div class="translator-container">
         <div class="header">
-            <i class="fas fa-arrow-left header-icon clickable-arrow larger-arrow" id="backArrow"></i>
-
+            <i class="fas fa-arrow-left header-icon clickable-arrow larger-arrow" id="translate_backArrow"></i>
             <h1>TRANSLATE</h1>
         </div>
         <div class="content">
             <div class="text-box">
                 <label for="englishText">English</label>
                 <textarea id="englishText" placeholder="In English..."></textarea>
+                <button id="saveEnglishText">Save English</button> <!-- Save button for English -->
             </div>
             <!-- Ensure translation arrows are in their own container for proper spacing -->
             <div class="translation-arrows">
@@ -29,11 +29,12 @@
             <div class="text-box">
                 <label for="frenchText">Française</label>
                 <textarea id="frenchText" placeholder="En Française..."></textarea>
+                <button id="saveFrenchText">Save French</button> <!-- Save button for French -->
+
             </div>
         </div>
     </div>
     <script src="popup.js"></script>
 </body>
-
 
 </html>

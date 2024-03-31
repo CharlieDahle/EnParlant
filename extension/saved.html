@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="saved.css">
+    <title>Saved</title>
+</head>
+
+<body id="savedPageIdentifier">
+    <div class="saved-container">
+        <div class="header">
+            <i class="fas fa-arrow-left header-icon clickable-arrow larger-arrow" id="saved_backArrow"></i>
+            <h1>SAVED</h1>
+        </div>
+        <div class="tabs">
+            <button id="wordsTab" class="tab active">Words</button>
+            <button id="phrasesTab" class="tab">Phrases</button>
+        </div>
+        <div id="wordsContainer" class="content active">
+            <!-- English and French words will be dynamically inserted here -->
+            <div class="translation-list" id="wordsList">
+                <!-- Placeholder for dynamic content -->
+            </div>
+        </div>
+        <div id="phrasesContainer" class="content">
+            <!-- English and French phrases will be dynamically inserted here -->
+            <div class="translation-list" id="phrasesList">
+                <!-- Placeholder for dynamic content -->
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
