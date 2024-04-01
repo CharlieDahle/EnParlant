@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const language = 'fr'; // For now, we're hardcoding this, but you can make it dynamic based on your needs
 
             if (text) {
-                fetch('http://localhost:3000/search-entries', {
+                fetch('http://10.150.3.55:3000/search-entries', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log(`Saving translation: ${englishText} (EN) | ${frenchText} (FR) as a ${type}`);
 
-        fetch('http://localhost:3000/save', {
+        fetch('http://10.150.3.55:3000/save', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        fetch('http://localhost:3000/translate', {
+        fetch('http://10.150.3.55:3000/translate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to fetch and display words
     function fetchAndDisplayWords() {
-        fetch('http://localhost:3000/words')
+        fetch('http://10.150.3.55:3000/words')
             .then(response => response.json())
             .then(words => {
                 const wordsList = document.getElementById('wordsList');
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to fetch and display phrases
     function fetchAndDisplayPhrases() {
-        fetch('http://localhost:3000/phrases')
+        fetch('http://10.150.3.55:3000/phrases')
             .then(response => response.json())
             .then(phrases => {
                 const phrasesList = document.getElementById('phrasesList');
