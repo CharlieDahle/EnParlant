@@ -1,4 +1,4 @@
-"En Parlant" is a Chrome extension designed to enhance language 
+"En Parlant" is a web extension designed to enhance language 
 learning and translation convenience within the browser. It serves
 dual purposes: facilitating quick translations and providing 
 definitions / thesaurus for selected words or phrases. The extension uses
