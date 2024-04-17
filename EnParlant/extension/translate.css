@@ -1,0 +1,161 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.translator-container {
+    width: 400px;
+    /* This is relative to the viewport width */
+    max-width: 1600px;
+    /* Increase this value to make the box wider on large screens */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+
+.header {
+    background-color: #e6e6e6;
+    color: #4b8b3b;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-icon {
+    margin-right: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    /* Center the content */
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
+.text-box {
+    flex: 1;
+    margin: 0 10px;
+    position: relative;
+    /* Maintain relative positioning for absolute children */
+    padding-bottom: 70px;
+    /* Increase to fit the button comfortably */
+}
+
+
+.text-box label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.text-box textarea {
+    width: 150px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    height: 150px;
+    /* Adjust height to match the design */
+    resize: none;
+}
+
+.translation-arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px
+        /* Set a specific width for the arrow container */
+        /* margin: 0 10px;
+    /* Add some horizontal space around the arrows */
+}
+
+.translate-arrow {
+    font-size: 24px;
+    /* Increase the font size to make arrows bigger */
+    margin: 10px 0;
+    /* Add space between the arrows if needed */
+    color: #4b8b3b;
+}
+
+.clickable-arrow {
+    cursor: pointer;
+}
+
+.larger-arrow {
+    font-size: 24px;
+    /* Adjust the size as needed */
+}
+
+.text-box {
+    flex: 1;
+    margin: 0 10px;
+    position: relative;
+    /* Set the position context for the save button */
+    padding-bottom: 50px;
+    /* Reserve space for the save button */
+}
+
+.text-box textarea.non-edited {
+    border: 2px solid blue;
+    /* Adjusted for demonstration */
+}
+
+
+#saveEnglishText,
+#saveFrenchText {
+    display: none;
+    /* Keep it hidden initially */
+    position: absolute;
+    /* Position it relative to the text-box */
+    bottom: 10px;
+    /* Place it near the bottom edge of the reserved space */
+    left: 50%;
+    /* Center it horizontally */
+    transform: translateX(-50%);
+    /* Ensure it's perfectly centered */
+    padding: 10px 30px;
+    /* Adequate padding for visibility and width */
+    background-color: #4CAF50;
+    /* A green background */
+    color: white;
+    /* White text for contrast */
+    border: none;
+    /* No border for a clean look */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    width: auto;
+    /* Auto width based on content */
+    min-width: 150px;
+    /* Minimum width to accommodate longer text without wrapping */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    overflow: hidden;
+    /* Keep all text inside the button */
+    text-overflow: ellipsis;
+    /* Use ellipsis if the text overflows */
+}
+
+#saveEnglishText.active,
+#saveFrenchText.active {
+    display: block;
+    /* Make it visible when activated */
+}
