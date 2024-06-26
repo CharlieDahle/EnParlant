@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="dictionary.css">
+    <title>Dictionary</title>
+</head>
+
+<body id="dictionaryPageIdentifier">
+    <div class="dictionary-container">
+        <div class="header">
+            <i class="fas fa-arrow-left header-icon clickable-arrow larger-arrow" id="dictionary_backArrow"></i>
+            <h1>DICTIONARY</h1>
+        </div>
+        <div class="search-and-toggle-container">
+            <div class="search-container">
+                <input type="text" id="wordInput" placeholder="Enter a word">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="language-switch">
+                <label for="languageToggle" class="toggle-label"><span>EN</span></label>
+                <input type="checkbox" id="languageToggle">
+                <label for="languageToggle" class="toggle-label"><span>FR</span></label>
+            </div>
+        </div>
+        <div id="definitionContainer">
+            <!-- Definitions will be displayed here -->
+        </div>
+    </div>
+    <script src="popup.js"></script>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

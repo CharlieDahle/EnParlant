@@ -1,0 +1,190 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adds a thin black border */
+    border: 1px solid black;
+    /* Adds a thin black border */
+    border-radius: 5px;
+    /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: adds shadow for better depth */
+    /* Adds rounded corners */
+}
+
+.search-and-toggle-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 8px;
+    font-size: larger;
+}
+
+.search-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+
+.dictionary-container {
+    width: 400px;
+    height: 350px;
+    /* Fixed height */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Ensures that any overflowing content does not affect the container size */
+}
+
+
+.header {
+    background-color: #e6e6e6;
+    color: #4b8b3b;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Updated to space-between to align items properly */
+    /* Applying the specific font */
+}
+
+.header h1 {
+    font-size: 30px;
+    margin: 0 auto;
+    margin-right: 14px;
+    /* Centering the h1 text within the available space */
+    flex-grow: 1;
+    /* Allows the title to take up any extra space */
+    text-align: center;
+    /* Ensures the text itself is centered */
+}
+
+.header-icon {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+
+#wordInput {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 0px;
+    /* Space for the search icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#searchButton {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #333;
+}
+
+#searchButton:hover {
+    background-color: #45a049;
+}
+
+#definitionContainer {
+    max-height: calc(100% - 40px);
+    /* Adjusted height to account for padding */
+    overflow-y: auto;
+    /* Enables vertical scrolling when content exceeds the container height */
+}
+
+#languageToggle {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 20px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}
+
+#languageToggle:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.3s;
+}
+
+#languageToggle:checked {
+    background-color: #4CAF50;
+}
+
+
+#languageToggle:checked:before {
+    transform: translateX(20px);
+}
+
+.toggle-label {
+    display: inline-block;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.language-switch {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.clickable-arrow {
+    cursor: pointer;
+}
+
+.larger-arrow {
+    font-size: 24px;
+}
+
+.dictionary-entry {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.entry-headword {
+    font-size: 20px;
+    color: #333;
+}
+
+.entry-definition {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.entry-synonyms {
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+    font-style: italic;
+}

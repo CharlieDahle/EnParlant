@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fjalla+One&family=Rubik+Mono+One&display=swap');
+
+/* Reset some basic elements */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    width: 375px;
+    margin: auto;
+    /* Center the body on the page if needed */
+    border: 1px solid black;
+    /* Adds a thin black border */
+    border-radius: 5px;
+    /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: adds shadow for better depth */
+}
+
+.title {
+    font-family: 'Rubik-mono-one', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    /* Adjust as needed */
+    margin-bottom: 20px;
+    /* Adjust this value based on your screenshot */
+    letter-spacing: 2px;
+    color: rgb(7, 151, 43);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align items to the left */
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 20px;
+    /* Increase the left padding to push content to the right */
+    margin-bottom: 2px;
+    /* Represents the spacing between buttons */
+    width: 170px;
+    /* Adjust based on your design */
+    text-decoration: none;
+    /* Removes underline from links */
+}
+
+.button:hover {
+    background-color: #5c95f0;
+}
+
+.button img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 20px;
+    /* Adjust if needed */
+}
+
+.button-text {
+    color: black;
+    /* Makes text color black */
+    font-weight: bold;
+    /* Makes text bold */
+    font-size: 20px;
+    /* Adjust as needed */
+}
+
+.button:not(:last-child) {
+    border-bottom: 1px solid gray;
+    /* Creates the line between buttons */
+}
