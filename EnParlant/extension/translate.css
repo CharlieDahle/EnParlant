@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
@@ -6,7 +8,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
+    /* Adds a thin black border */
+    border: 1px solid black;
+    /* Adds a thin black border */
+    border-radius: 5px;
+    /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: adds shadow for better depth */
+    /* Adds rounded corners */
 }
 
 .translator-container {
@@ -27,15 +37,24 @@ body {
     padding: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    /* Updated to space-between to align items properly */
+    /* Applying the specific font */
+}
+
+.header h1 {
+    font-size: 30px;
+    margin: 0 auto;
+    margin-right: 14px;
+    /* Centering the h1 text within the available space */
+    flex-grow: 1;
+    /* Allows the title to take up any extra space */
+    text-align: center;
+    /* Ensures the text itself is centered */
 }
 
 .header-icon {
     margin-right: 10px;
-}
-
-.header h1 {
-    font-size: 24px;
-    margin: 0;
 }
 
 .content {

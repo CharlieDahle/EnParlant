@@ -15,18 +15,23 @@
             <i class="fas fa-arrow-left header-icon clickable-arrow larger-arrow" id="dictionary_backArrow"></i>
             <h1>DICTIONARY</h1>
         </div>
-        <input type="text" id="wordInput" placeholder="Enter a word">
-        <!-- Slider to toggle between English and French -->
-        <label class="switch">
-            <input type="checkbox" id="languageToggle">
-            <span class="slider round"></span>
-        </label>
-        <span id="languageLabel">French</span>
-        <button id="searchButton">Search</button>
+        <div class="search-and-toggle-container">
+            <div class="search-container">
+                <input type="text" id="wordInput" placeholder="Enter a word">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="language-switch">
+                <label for="languageToggle" class="toggle-label"><span>EN</span></label>
+                <input type="checkbox" id="languageToggle">
+                <label for="languageToggle" class="toggle-label"><span>FR</span></label>
+            </div>
+        </div>
         <div id="definitionContainer">
             <!-- Definitions will be displayed here -->
         </div>
     </div>
+    <script src="popup.js"></script>
+
     <script src="popup.js"></script>
 </body>
 

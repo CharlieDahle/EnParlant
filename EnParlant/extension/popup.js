@@ -1,4 +1,4 @@
-const DBversion = 6;
+const DBversion = 7;
 let englishAtTimeOfTranslation;
 let frenchAtTimeOfTranslation;
 
@@ -115,10 +115,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.getElementById('searchButton').addEventListener('click', function () {
             const text = document.getElementById('wordInput').value.trim(); // Assuming 'wordInput' is the ID of your input field
-            const language = 'fr'; // For now, we're hardcoding this, but you can make it dynamic based on your needs
+            const toggle = document.getElementById('languageToggle');
+            const language = toggle.checked ? 'fr' : 'en'; // Dynamically set language based on the toggle state
 
             if (text) {
-                fetch('http://10.150.3.55:3000/search-entries', {
+                fetch('http://localhost:3000/search-entries', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -160,12 +161,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     .catch(error => console.error('Error:', error));
             }
         });
+
     }
 
 
     if (document.getElementById('homePageIdentifier')) {
         console.log("home page!");
-        // does not get here!
     }
 
     function isWord(text) {
@@ -218,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        fetch('http://10.150.3.55:3000/translate', {
+        fetch('http://localhost:3000/translate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

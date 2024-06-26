@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fjalla+One&family=Rubik+Mono+One&display=swap');
+
 /* Reset some basic elements */
 html,
 body,
@@ -103,64 +105,81 @@ section {
     display: block;
 }
 
-body {
-    line-height: 1;
-}
-
 ol,
 ul {
     list-style: none;
 }
 
-/* Set up the body with a centered content box */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    /* This is Tailwind's gray-100 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.extension-box {
-    border-radius: 0rem;
-    /* Adjust as needed for rounded corners */
-    overflow: hidden;
-    /* This line should clip the shadow to the border radius */
-    background-color: #d4d5d5;
-    /* Tailwind's gray-200 */
-    padding: 1rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-    /* Tailwind's shadow-lg */
-    width: 300px;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    /* Tailwind's space-y-2 */
+    align-items: center;
+    padding-top: 30px;
+    width: 375px;
+    margin: auto;
+    /* Center the body on the page if needed */
+    border: 1px solid black;
+    /* Adds a thin black border */
+    border-radius: 5px;
+    /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: adds shadow for better depth */
 }
 
+.title {
+    font-family: 'Rubik-mono-one', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    /* Adjust as needed */
+    margin-bottom: 20px;
+    /* Adjust this value based on your screenshot */
+    letter-spacing: 2px;
+    color: rgb(7, 151, 43);
+}
 
 .button {
-    text-align: center;
-    background-color: #60a5fa;
-    /* This is Tailwind's blue-400 */
-    color: #000;
-    /* This is Tailwind's text-black */
-    font-weight: 600;
-    /* This is Tailwind's font-semibold */
-    padding: 0.25rem 0.5rem;
-    /* Reduced padding for smaller buttons */
-    border-radius: .5rem;
-    /* This is Tailwind's rounded */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align items to the left */
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 20px;
+    /* Increase the left padding to push content to the right */
+    margin-bottom: 2px;
+    /* Represents the spacing between buttons */
+    width: 170px;
+    /* Adjust based on your design */
     text-decoration: none;
-    margin: auto;
-    /* Center buttons in the flex container */
-    width: 80%;
-    /* Smaller width */
+    /* Removes underline from links */
 }
 
 .button:hover {
-    background-color: #3b82f6;
-    /* This is Tailwind's blue-500 for hover effect */
+    background-color: #5c95f0;
+}
+
+.button img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 20px;
+    /* Adjust if needed */
+}
+
+.button-text {
+    color: black;
+    /* Makes text color black */
+    font-weight: bold;
+    /* Makes text bold */
+    font-size: 20px;
+    /* Adjust as needed */
+}
+
+.button:not(:last-child) {
+    border-bottom: 1px solid gray;
+    /* Creates the line between buttons */
 }
